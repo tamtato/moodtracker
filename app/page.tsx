@@ -1,4 +1,5 @@
 "use client";
+import WeekSelectionBar from "@/components/WeekSelectionBar";
 import { getUserMoods, userMoodsVar } from "@/store/user/moods";
 import { Mood } from "@/types/user-types";
 import { useReactiveVar } from "@apollo/client";
@@ -15,7 +16,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="">track</div>
+      <WeekSelectionBar />
     </main>
   );
 }

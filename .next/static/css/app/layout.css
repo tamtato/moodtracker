@@ -557,6 +557,9 @@ video {
 .max-w-5xl {
   max-width: 64rem;
 }
+.grow {
+  flex-grow: 1;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -623,6 +626,9 @@ video {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+.text-center {
+  text-align: center;
+}
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -640,6 +646,18 @@ video {
 }
 .opacity-80 {
   opacity: 0.8;
+}
+.opacity-60 {
+  opacity: 0.6;
+}
+.opacity-40 {
+  opacity: 0.4;
+}
+.opacity-20 {
+  opacity: 0.2;
+}
+.opacity-70 {
+  opacity: 0.7;
 }
 
 :root {
