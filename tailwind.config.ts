@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        "primary-text": "#32323C",
+        "blue-text": "#2084FA",
+        "green-text": "#13BB88",
+        "bg-gray": "#EEEEEE",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
