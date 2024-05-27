@@ -4,8 +4,8 @@ export interface Weather {
 }
 
 export interface Mood {
-  mood: string;
-  date: string;
-  comment: string;
-  weather: Weather;
+  mood: string | null;
+  date: Date;
+  comment: string | null;
+  weather: Weather | null;
 }
