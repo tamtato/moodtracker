@@ -34,7 +34,13 @@ export const getUserMoods = async () => {
         comment: null,
         weather: null,
       }));
-      localStorage.setItem("userMoods", JSON.stringify(initialMoodData));
+
+      localStorage.setItem(
+        "userMoods",
+        storedMoodData
+          ? JSON.stringify([...moodData, ...initialMoodData])
+          : JSON.stringify(initialMoodData)
+      );
       moodData = initialMoodData;
     }
     userMoodsVar(moodData);

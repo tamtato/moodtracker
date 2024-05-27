@@ -1,7 +1,7 @@
 "use client";
-import MoodLog from "@/components/MoodLog";
+import MoodLogCard from "@/components/MoodLogCard";
 import WeekChangerBar from "@/components/WeekChangerBar";
-import WeekDaysBar from "@/components/WeekDaysBar";
+import WeekDaysCard from "@/components/WeekDaysCard";
 import { getUserMoods } from "@/store/user/moods";
 
 import { useEffect } from "react";
@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <main>
       <WeekChangerBar />
-      <WeekDaysBar />
-      <MoodLog />
+      <WeekDaysCard />
+      <MoodLogCard />
     </main>
   );
 }

@@ -5,7 +5,7 @@ import DayBlock from "./DayBlock";
 import { weekDatesVar } from "@/store/weekDates";
 import { formatDate } from "date-fns";
 
-const WeekDaysBar = () => {
+const WeekDaysCard = () => {
   const weekDates: Date[] = useReactiveVar(weekDatesVar);
   const userMoods: Mood[] = useReactiveVar(userMoodsVar);
   const selectedDay: Mood | null = useReactiveVar(selectedDayVar);
@@ -33,4 +33,4 @@ const WeekDaysBar = () => {
     </div>
   );
 };
-export default WeekDaysBar;
+export default WeekDaysCard;

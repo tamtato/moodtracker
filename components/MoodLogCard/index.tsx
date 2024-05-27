@@ -3,8 +3,11 @@ import { Mood } from "@/types/user-types";
 import { useReactiveVar } from "@apollo/client";
 import { formatDate } from "date-fns";
 import MoodForm from "./MoodForm";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { getMoodNameIcon } from "@/helpers/moods";
+import { faFaceMehBlank } from "@fortawesome/free-regular-svg-icons";
 
-const MoodLog = () => {
+const MoodLogCard = () => {
   const selectedDay: Mood | null = useReactiveVar(selectedDayVar);
 
   return (
@@ -16,11 +19,17 @@ const MoodLog = () => {
       </div>
       {selectedDay &&
         (selectedDay.mood ? (
-          <div>mood</div>
+          <div className="flex gap-2 items-center mt-4">
+            <FontAwesomeIcon
+              icon={getMoodNameIcon(selectedDay.mood)?.icon || faFaceMehBlank}
+              size="2x"
+            />
+            <p>{selectedDay.mood}</p>
+          </div>
         ) : (
           <MoodForm selectedDay={selectedDay} />
         ))}
     </div>
   );
 };
-export default MoodLog;
+export default MoodLogCard;
